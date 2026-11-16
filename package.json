@@ -1,0 +1,10 @@
+{
+  "name": "lost-letters",
+  "private": true,
+  "description": "A retro pixel typing adventure. No build step: open index.html via any static server.",
+  "type": "module",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "test": "node --test tests/*.test.js"
+  }
+}
