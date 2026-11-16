@@ -40,7 +40,7 @@ export class ResultsScene {
   }
 
   render(ctx) {
-    ctx.fillStyle = '#000';
+    ctx.fillStyle = C.black;
     ctx.fillRect(0, 0, W, H);
     const r = this.round;
 

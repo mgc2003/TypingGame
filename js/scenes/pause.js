@@ -21,11 +21,11 @@ export class PauseScene {
   }
 
   render(ctx) {
-    ctx.fillStyle = 'rgba(0,0,0,0.5)';
+    ctx.fillStyle = 'rgba(11,9,7,0.6)';
     ctx.fillRect(0, 0, W, 480);
     box(ctx, W / 2 - 130, 120, 260, 220);
     drawText(ctx, 'MENU', W / 2, 140, { scale: 2, color: C.yellow, align: 'center' });
     this.menu.render(ctx, W / 2 - 90, 184, { gap: 34 });
-    drawText(ctx, 'Progress saves automatically.', W / 2, 360, { color: C.gray, align: 'center', shadow: '#000' });
+    drawText(ctx, 'Progress saves automatically.', W / 2, 360, { color: C.gray, align: 'center', shadow: C.black });
   }
 }

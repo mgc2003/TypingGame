@@ -2,13 +2,13 @@
 export const TILE = 16;
 
 const PAL = {
-  grass: '#3d6b45', grassDark: '#335c3b', grassLight: '#4f8452', tuft: '#6aa05e',
-  path: '#a8845a', pathDark: '#8e6c46', pathLight: '#bc9a6c',
-  leaf: '#1f4a2e', leafDark: '#122a1c', leafMid: '#2f6b3c', leafLight: '#4a8a4c',
-  water: '#2b4f8c', wave: '#4a78c0', sparkle: '#9ac0f0',
-  wall: '#d8c4a0', wallLine: '#b89c74', roof: '#9a3c4c', roofDark: '#7a2a3a', roofLight: '#b85868',
-  wood: '#8a5a30', woodLight: '#a8743e', woodDark: '#5a3a20',
-  rock: '#8a8a94', rockDark: '#4a4a54', rockLight: '#b0b0ba',
+  grass: '#26372b', grassDark: '#1e2c23', grassLight: '#314636', tuft: '#4b5c3c',
+  path: '#5c4733', pathDark: '#47372a', pathLight: '#6e5840',
+  leaf: '#172a1e', leafDark: '#0c1610', leafMid: '#213a29', leafLight: '#2f4c35',
+  water: '#18263a', wave: '#2a405c', sparkle: '#8a98ac',
+  wall: '#6b5a48', wallLine: '#544536', roof: '#4e1f26', roofDark: '#36141a', roofLight: '#6a2e35',
+  wood: '#5a3c24', woodLight: '#74502e', woodDark: '#3a2616',
+  rock: '#4f4f56', rockDark: '#2c2c32', rockLight: '#6c6c78',
 };
 
 function rng(seed) {
@@ -104,14 +104,16 @@ function paintRoof(g, y) {
 function paintDoor(g) {
   paintWall(g);
   px(g, 4, 2, PAL.woodDark, 8, 14);
-  px(g, 5, 3, '#5a3424', 6, 13);
-  px(g, 9, 9, '#e8c84a');
+  px(g, 5, 3, '#2a1a10', 6, 13);
+  px(g, 9, 9, '#c89a40');
+  // lit window glow beside the door
+  px(g, 13, 5, '#d9a845', 2, 4);
 }
 
 function paintFlowers(g, seed) {
   paintGrass(g, seed);
   const r = rng(seed + 19);
-  const cols = ['#f08ab0', '#f4ecdc', '#c8a0f0', '#ffd25a'];
+  const cols = ['#9a4c5e', '#cfc0a0', '#6e5e8c', '#b8903c'];
   for (let i = 0; i < 3; i++) {
     const x = 2 + ((r() * 11) | 0);
     const y = 2 + ((r() * 11) | 0);
@@ -120,7 +122,7 @@ function paintFlowers(g, seed) {
     px(g, x - 1, y, c);
     px(g, x + 1, y, c);
     px(g, x, y + 1, c);
-    px(g, x, y, '#ffd25a');
+    px(g, x, y, '#b8903c');
   }
 }
 

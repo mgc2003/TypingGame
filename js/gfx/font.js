@@ -818,7 +818,7 @@ function glyphCanvas(ch, color) {
   return c;
 }
 
-export function drawChar(ctx, ch, x, y, scale = 2, color = '#fff') {
+export function drawChar(ctx, ch, x, y, scale = 2, color = '#e8dcc0') {
   if (ch === ' ') return;
   ctx.drawImage(glyphCanvas(ch, color), Math.round(x), Math.round(y), GLYPH_W * scale, GLYPH_H * scale);
 }
@@ -832,7 +832,7 @@ export function measure(str, scale = 2) {
  * Draw a single line of text. align: 'left' | 'center' | 'right' (x is the anchor).
  * Returns the drawn width.
  */
-export function drawText(ctx, str, x, y, { scale = 2, color = '#fff', align = 'left', shadow = null } = {}) {
+export function drawText(ctx, str, x, y, { scale = 2, color = '#e8dcc0', align = 'left', shadow = null } = {}) {
   str = String(str);
   const w = measure(str, scale);
   let sx = x;

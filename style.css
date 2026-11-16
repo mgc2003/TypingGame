@@ -1,5 +1,5 @@
 :root {
-  --bg: #000;
+  --bg: #0b0907;
 }
 
 * { box-sizing: border-box; }
@@ -22,7 +22,7 @@ html, body {
 
 #game {
   display: block;
-  background: #000;
+  background: var(--bg);
   image-rendering: pixelated;
   image-rendering: crisp-edges;
   outline: none;

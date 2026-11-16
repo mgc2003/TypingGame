@@ -1,55 +1,56 @@
-// Original letter lines, one set per villager, roughly ordered by difficulty.
+// Original letter lines, one set per villager, ordered by difficulty.
+// Each set leans on a different skill: rhythm, capitals & numbers, punctuation, and stamina.
 // Only use characters the bitmap font can draw (tests/content.test.js checks this).
 
 export const SENTENCES = {
-  // Short and gentle: mostly lowercase, light punctuation.
+  // Gentle but literary: full sentences with commas, semicolons and the odd apostrophe.
   mushroom: [
-    'I hope it rains soft rain today.',
-    'The moss here is very warm.',
-    'Please do not step on my cousins.',
-    'I am small but I am brave.',
-    'Dear sun, you are too bright.',
-    'The night smells like wet leaves.',
-    'I wrote this letter under my cap.',
-    'Some days I hide all day long.',
-    'Thank you for the kind snail.',
-    'My spots are not polka dots.',
-    'I like quiet songs and slow walks.',
-    'Will you write back to me soon?',
+    'I read by candlelight beneath my cap, though the wax drips onto my spores.',
+    'Dear Diary: the moss is damp, the moon is thin, and I am quietly content.',
+    'Autumn arrived early this year; the beetles call it an omen, but I doubt them.',
+    'I have pressed seventeen fallen leaves between the pages of my favorite book.',
+    'Please return my borrowed lantern before the frost settles over the hollow.',
+    'Some nights I wonder whether the stars are lonely, or merely very far away.',
+    'My grandmother kept a journal for ninety-two years; I have kept mine for three.',
+    'The old owl lectures on philosophy every Thursday, and I never miss a word.',
+    'I\'ve decided to learn Latin, or at least the parts that sound like rain.',
+    'Forgive the ink stains; I wrote this letter while the thunder was rolling.',
+    'There is a quiet sort of courage in reading alone in the dark, isn\'t there?',
+    'Tea, two blankets, and an unread novel: that is my idea of a perfect evening.',
   ],
-  // Medium length, capitals and commas: official business.
+  // Official correspondence: capitals, numbers, dates, abbreviations and brackets.
   postmaster: [
-    'Dear Head Office, the storm ate half of my stamps.',
-    'Every letter must be sorted by noon, no exceptions.',
-    'I have been a mailbox for forty years and I am tired.',
-    'Please send more twine, the old twine has gone soggy.',
-    'To whom it may concern: stop putting snails in me.',
-    'The flag on my side is up, which means I am busy.',
-    'A good courier is quick, careful, and never late.',
-    'Rain is not an excuse, but it is a very good reason.',
-    'Mind the ink, it smudges when you rush the ending.',
-    'I am not grumpy, I am simply full of important mail.',
+    'To the Head Office: the storm of October 3rd destroyed 412 stamps and one umbrella.',
+    'Per Regulation 7(b), every parcel must be weighed, wrapped, and wax-sealed by dusk.',
+    'I have served this village for forty-one years; I expect a pension, not pity.',
+    'Kindly inform the Ravens\' Society that their correspondence is overdue. Again.',
+    'Enclosed: one ledger, one complaint, and a slightly damp apology from the frogs.',
+    'Postage has risen to 9 copper pieces; I did not set the price, so stop glaring.',
+    'A courier who smudges the ink smudges the reputation of the entire postal service.',
+    'Re: missing letters. Item 1: found. Item 2: soggy. Items 3 through 6: lost.',
+    'The archive\'s oldest envelope is dated 1789; nobody has dared to open it since.',
+    'I am not sentimental; I simply keep every letter I have ever received, alphabetized.',
   ],
-  // Punctuation-heavy and excitable.
+  // Punctuation gauntlet: quotes, parentheses, dashes, colons, times and lists.
   ghost: [
-    'Boo! Did I scare you? No? Oh well, I tried my best!',
-    'The pond glows at night; the frogs say it\'s my fault.',
-    'Dear Moth, please stop visiting me at 3:00 a.m. Thanks!',
-    'I\'m not see-through, I\'m "lightly translucent." Big difference.',
-    'Things I love: candles, candy (the sour kind), and you!',
-    'Is it rude to float? I can\'t help it; my feet are gone.',
-    'P.S. My lantern\'s name is Flicker, and she says hello.',
-    'Who\'s there? It\'s me! (Sorry, I always do that joke.)',
-    'If you see a light in the woods, wave; it\'s probably me!',
-    'Ha! Ha! Ha! Sorry, I was laughing at a cloud again.',
+    'Boo! (That\'s Old Spectral for "good evening"; I\'ve been studying dead languages!)',
+    'The library is haunted - by me, obviously - but only between midnight and 3:15 a.m.',
+    'I once read "Ninety Nights in a Cold Tower" in one sitting; I didn\'t blink once!',
+    'Dear Moth: stop circling my lantern; it\'s rude, it\'s dizzying, and Flicker hates it.',
+    'Are ghosts allowed library cards? I\'ve asked twice; the librarian fainted both times.',
+    'My epitaph reads: "Here lies Wisp, who was curious." I think that\'s rather lovely!',
+    'P.S. If you hear whispering in the reading room, it\'s me; I\'m practicing sonnets.',
+    'Candles: 14. Books: 237. Friends: 2 (Flicker counts!). Regrets: absolutely none.',
+    'Is it "haunting" if you\'re simply too shy to leave? Asking for myself, obviously.',
+    'I\'ve hidden a riddle in chapter III of every book on the east shelf; good luck!',
   ],
-  // Long, thoughtful sentences.
+  // Long, winding thoughts: stamina, rich vocabulary and careful punctuation.
   sage: [
-    'Patience is not waiting quietly; it is keeping your hands steady while the world rushes past you like a river.',
-    'When I was young, I raced the hares across the valley. I lost every race, but I saw every flower on the way.',
-    'A letter carries more than words, little one. It carries the hope of someone who wanted you to read it.',
-    'Speed comes to those who stop chasing it. Type each letter as if it matters, and soon they will all arrive on time.',
-    'The storm took our letters, but it could not take our stories. Those we keep in our shells, safe and warm.',
-    'Mistakes are only footprints. Look back at them kindly, then keep walking toward the light at the end of the road.',
+    'In my youth, I believed wisdom was a destination; now I suspect it is merely the habit of walking slowly enough to notice the road.',
+    'Every library is a cemetery of voices that refuse to stay quiet. Open any book, and someone long gone will clear their throat and begin.',
+    'The candle does not resent the darkness, little one; it simply burns, steadily and without complaint, until the morning makes it unnecessary.',
+    'I have written 1,206 letters in my lifetime. Perhaps a third were answered, and every unanswered one taught me something about patience.',
+    'Do not mistake haste for diligence: a scholar who races through a manuscript arrives at the final page knowing nothing but its numbers.',
+    'Memory is a palimpsest; we scrape away the old words to write new ones, yet the faint ghost of every sentence lingers beneath the ink.',
   ],
 };

@@ -29,7 +29,7 @@ export function drawChart(ctx, x, y, w, h, history, { maxPoints = 30 } = {}) {
   const minA = 50;
 
   // grid lines
-  ctx.fillStyle = '#222232';
+  ctx.fillStyle = '#2a2219';
   for (let i = 0; i <= 4; i++) ctx.fillRect(px, py + Math.round((ph * i) / 4), pw, 1);
   drawText(ctx, String(maxW), px - 8, py - 6, { color: C.yellow, align: 'right' });
   drawText(ctx, '0', px - 8, py + ph - 8, { color: C.yellow, align: 'right' });

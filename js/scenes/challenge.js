@@ -154,7 +154,7 @@ export class ChallengeScene {
   // ---------- render ----------
 
   render(ctx) {
-    ctx.fillStyle = '#000';
+    ctx.fillStyle = C.black;
     ctx.fillRect(0, 0, W, H);
 
     // header
@@ -241,10 +241,11 @@ export class ChallengeScene {
   renderReview(ctx) {
     const r = this.lastResult;
     const bx = TYPED_BOX.x + 60;
-    const by = TYPED_BOX.y + TYPED_BOX.h - 52;
-    box(ctx, bx, by, TYPED_BOX.w - 120, 40, { border: C.yellow, bw: 3 });
+    // sits below the 4th text line so even the longest letters stay readable
+    const by = TYPED_BOX.y + TYPED_BOX.h - 38;
+    box(ctx, bx, by, TYPED_BOX.w - 120, 34, { border: C.yellow, bw: 3 });
     const txt = `Sent!   ${showWpm(r.net)} WPM   ${showAcc(r.acc)}%`;
-    drawText(ctx, txt, W / 2 + 12, by + 12, { color: C.yellow, align: 'center' });
-    drawSprite(ctx, 'envelope', 'idle', W / 2 - 12 - txt.length * 6 - 14, by + 13, 2);
+    drawText(ctx, txt, W / 2 + 12, by + 9, { color: C.yellow, align: 'center' });
+    drawSprite(ctx, 'envelope', 'idle', W / 2 - 12 - txt.length * 6 - 14, by + 10, 2);
   }
 }

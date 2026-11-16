@@ -269,7 +269,27 @@ export class OverworldScene {
     }
     ctx.restore();
 
+    this.drawLamplight(ctx, shakeX, cam);
     this.drawHud(ctx);
+  }
+
+  /** Dusky tint plus a warm pool of candlelight around the courier. */
+  drawLamplight(ctx, shakeX, cam) {
+    const p = this.player;
+    const cx = (p.x + 8 - cam) * SCALE + shakeX;
+    const cy = (p.y + 10) * SCALE;
+    const flicker = Math.sin(this.t / 7) * 4 + Math.sin(this.t / 3.1) * 2;
+    const g = ctx.createRadialGradient(cx, cy, 60 + flicker, cx, cy, 420);
+    g.addColorStop(0, 'rgba(10,7,4,0.05)');
+    g.addColorStop(0.45, 'rgba(10,7,4,0.35)');
+    g.addColorStop(1, 'rgba(6,4,3,0.82)');
+    ctx.fillStyle = g;
+    ctx.fillRect(0, 0, W, H);
+    const warm = ctx.createRadialGradient(cx, cy, 0, cx, cy, 110 + flicker);
+    warm.addColorStop(0, 'rgba(217,168,69,0.10)');
+    warm.addColorStop(1, 'rgba(217,168,69,0)');
+    ctx.fillStyle = warm;
+    ctx.fillRect(0, 0, W, H);
   }
 
   drawPlayer(ctx) {
@@ -285,7 +305,7 @@ export class OverworldScene {
     if (npc.sprite === 'ghost') y += Math.round(Math.sin(this.t / 20) * 1.5) - 2;
     // soft glow under the lantern ghost
     if (npc.sprite === 'ghost') {
-      ctx.fillStyle = 'rgba(255,210,90,0.12)';
+      ctx.fillStyle = 'rgba(230,170,80,0.18)';
       ctx.beginPath();
       ctx.arc(x + 13, y + 11, 9 + Math.sin(this.t / 10), 0, Math.PI * 2);
       ctx.fill();
@@ -311,7 +331,7 @@ export class OverworldScene {
     if (next) {
       const goal = goalFor(next, save.settings.difficulty);
       const txt = `Next: ${next.name}  ${goal.wpm} WPM / ${goal.acc}%`;
-      drawText(ctx, txt, W - 12, H - 24, { color: C.white, align: 'right', shadow: '#000' });
+      drawText(ctx, txt, W - 12, H - 24, { color: C.white, align: 'right', shadow: C.black });
     }
   }
 }

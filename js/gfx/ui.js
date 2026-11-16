@@ -7,15 +7,17 @@ export const W = 640;
 export const H = 480;
 
 export const C = {
-  white: '#ffffff',
-  gray: '#8a8a9a',
-  dim: '#4a4a5a',
-  yellow: '#ffe14a',
-  red: '#ff4a5a',
-  green: '#6adf6a',
-  cyan: '#5ad0ff',
-  orange: '#ff9a3a',
-  black: '#000000',
+  // dark academia: parchment, candlelight, oxblood and ink
+  white: '#e8dcc0',
+  gray: '#8c7f68',
+  dim: '#4e4436',
+  yellow: '#d9a845',
+  red: '#c24a52',
+  green: '#8aab78',
+  cyan: '#7f9fb8',
+  orange: '#c07a3a',
+  black: '#0b0907',
+  shadow: '#3a2416',
 };
 
 /** Retro dialog box: black fill with a chunky white border. */

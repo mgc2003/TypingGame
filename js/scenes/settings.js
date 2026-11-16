@@ -62,7 +62,7 @@ export class SettingsScene {
   }
 
   render(ctx) {
-    ctx.fillStyle = '#000';
+    ctx.fillStyle = C.black;
     ctx.fillRect(0, 0, W, H);
     drawText(ctx, 'SETTINGS', W / 2, 40, { scale: 3, align: 'center' });
     this.menu.render(ctx, 150, 140, { gap: 44 });

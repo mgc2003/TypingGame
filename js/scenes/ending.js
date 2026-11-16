@@ -36,7 +36,7 @@ export class EndingScene {
   }
 
   render(ctx) {
-    ctx.fillStyle = '#000';
+    ctx.fillStyle = C.black;
     ctx.fillRect(0, 0, W, H);
 
     // little parade: the courier and all their new friends
@@ -59,7 +59,7 @@ export class EndingScene {
     ctx.globalAlpha = 1;
 
     if (this.t > 180) {
-      drawText(ctx, 'THE END', W / 2, 330, { scale: 4, align: 'center', color: C.white, shadow: '#3a2a5a' });
+      drawText(ctx, 'THE END', W / 2, 330, { scale: 4, align: 'center', color: C.white, shadow: C.shadow });
       drawText(ctx, `Best speed ${showWpm(save.bests.net)} WPM   Best accuracy ${showAcc(save.bests.acc)}%`, W / 2, 384, {
         color: C.gray,
         align: 'center',

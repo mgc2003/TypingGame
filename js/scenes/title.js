@@ -63,7 +63,7 @@ export class TitleScene {
   }
 
   render(ctx) {
-    ctx.fillStyle = '#000';
+    ctx.fillStyle = C.black;
     ctx.fillRect(0, 0, W, H);
     for (const l of this.letters) {
       ctx.globalAlpha = 0.25;
@@ -71,7 +71,7 @@ export class TitleScene {
     }
     ctx.globalAlpha = 1;
 
-    drawText(ctx, 'LOST LETTERS', W / 2, 70, { scale: 6, color: C.white, align: 'center', shadow: '#3a2a5a' });
+    drawText(ctx, 'LOST LETTERS', W / 2, 70, { scale: 6, color: C.white, align: 'center', shadow: C.shadow });
     drawText(ctx, 'a little typing adventure', W / 2, 130, { scale: 2, color: C.gray, align: 'center' });
 
     const bob = Math.floor(this.t / 20) % 2;

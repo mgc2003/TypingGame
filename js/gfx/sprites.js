@@ -1,10 +1,10 @@
 // Character sprites drawn as pixel strings. Each char maps to a palette colour; "." is transparent.
 
-const OUT = '#1a1020';
+const OUT = '#120c0a';
 
 export const SPRITES = {
   fox: {
-    palette: { o: OUT, O: '#e8782a', d: '#b85418', w: '#f4ecdc', k: '#100810', b: '#7a4a2a', s: '#5a3018' },
+    palette: { o: OUT, O: '#b85a26', d: '#8a3e16', w: '#ddd0b4', k: '#0c0806', b: '#5a3420', s: '#3e2212' },
     frames: {
       down0: [
         '................',
@@ -63,7 +63,7 @@ export const SPRITES = {
     },
   },
   mushroom: {
-    palette: { o: OUT, r: '#c8344a', R: '#8a1e34', w: '#f4ecdc', c: '#eadbb8', C: '#c4b08a', k: '#100810', p: '#f08a9a' },
+    palette: { o: OUT, r: '#8e2a36', R: '#5e1824', w: '#d8cbb0', c: '#d4c4a0', C: '#a8946e', k: '#0c0806', p: '#c8707c' },
     frames: {
       idle: [
         '................',
@@ -86,7 +86,7 @@ export const SPRITES = {
     },
   },
   postmaster: {
-    palette: { o: OUT, B: '#3a5cc8', b: '#26388a', l: '#7aa0f0', f: '#d8404a', k: '#100810', w: '#f4ecdc', g: '#6a4a3a' },
+    palette: { o: OUT, B: '#2c3c6a', b: '#1c2646', l: '#4e6494', f: '#8e2a36', k: '#0c0806', w: '#ddd0b4', g: '#4a3426' },
     frames: {
       idle: [
         '................',
@@ -109,7 +109,7 @@ export const SPRITES = {
     },
   },
   ghost: {
-    palette: { o: '#2a1a3a', g: '#e8e4f8', G: '#b0a8d8', k: '#100810', p: '#f0a0c0', y: '#ffd25a', Y: '#f08a2a', m: '#5a5a6a' },
+    palette: { o: '#1e1626', g: '#d6d0c4', G: '#9a92a6', k: '#0c0806', p: '#b88a94', y: '#f0c860', Y: '#c8742a', m: '#4a4650' },
     frames: {
       idle: [
         '......oooo......',
@@ -132,7 +132,7 @@ export const SPRITES = {
     },
   },
   sage: {
-    palette: { o: OUT, S: '#2e5a34', h: '#7ab86a', t: '#c8b878', T: '#9a8a58', w: '#f4ecdc', k: '#100810', s: '#4a8a4a' },
+    palette: { o: OUT, S: '#2a3e2a', h: '#5a7a4a', t: '#a8986a', T: '#7a6c48', w: '#ddd0b4', k: '#0c0806', s: '#3a5a3a' },
     frames: {
       idle: [
         '................',
@@ -155,7 +155,7 @@ export const SPRITES = {
     },
   },
   heart: {
-    palette: { r: '#ff2a4a', h: '#ff8a9a' },
+    palette: { r: '#c4283e', h: '#e07080' },
     frames: {
       idle: [
         '.rr.rr.',
@@ -168,7 +168,7 @@ export const SPRITES = {
     },
   },
   envelope: {
-    palette: { o: '#2a2030', w: '#f4ecdc', s: '#c8b8a0', r: '#d8404a' },
+    palette: { o: '#2a1e16', w: '#ddd0b4', s: '#a8987a', r: '#8e2a36' },
     frames: {
       idle: [
         'oooooooooo',

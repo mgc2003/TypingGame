@@ -30,7 +30,7 @@ export class StatsScene {
   }
 
   render(ctx) {
-    ctx.fillStyle = '#000';
+    ctx.fillStyle = C.black;
     ctx.fillRect(0, 0, W, H);
     drawText(ctx, 'YOUR TYPING', W / 2, 16, { scale: 3, align: 'center' });
 

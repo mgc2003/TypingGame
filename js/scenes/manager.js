@@ -1,5 +1,5 @@
 import { input } from '../input.js';
-import { W, H } from '../gfx/ui.js';
+import { W, H, C } from '../gfx/ui.js';
 
 /**
  * Scene stack. Only the top scene updates; rendering starts from the highest opaque scene so
@@ -75,13 +75,13 @@ export class SceneManager {
 
   render() {
     const ctx = this.ctx;
-    ctx.fillStyle = '#000';
+    ctx.fillStyle = C.black;
     ctx.fillRect(0, 0, W, H);
     let start = this.stack.length - 1;
     while (start > 0 && this.stack[start].opaque === false) start--;
     for (let i = Math.max(0, start); i < this.stack.length; i++) this.stack[i].render(ctx);
     if (this.fade) {
-      ctx.fillStyle = `rgba(0,0,0,${Math.min(1, this.fade.t / this.fade.frames)})`;
+      ctx.fillStyle = `rgba(11,9,7,${Math.min(1, this.fade.t / this.fade.frames)})`;
       ctx.fillRect(0, 0, W, H);
     }
   }
