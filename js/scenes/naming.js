@@ -62,7 +62,7 @@ export class NamingScene {
     ctx.fillStyle = C.black;
     ctx.fillRect(0, 0, W, H);
     drawText(ctx, 'Name the courier.', W / 2, 60, { scale: 3, align: 'center' });
-    drawSprite(ctx, 'fox', Math.floor(this.t / 30) % 2 ? 'down0' : 'down1', W / 2 - 48, 110, 6);
+    drawSprite(ctx, 'owl', 'down' + (Math.floor(this.t / 12) % 2), W / 2 - 48, 106 + Math.round(Math.sin(this.t / 15) * 4), 6);
 
     const sx = this.shake ? (this.shake % 2 ? 4 : -4) : 0;
     const scale = 4;

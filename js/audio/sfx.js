@@ -94,7 +94,8 @@ export const sfx = {
     noise(0.7, { vol: 0.5, cutoff: 400 });
     tone(80, 0.6, { type: 'sawtooth', vol: 0.08, slide: 50 });
   },
+  /** Soft wing-beat while the owl flies. */
   step() {
-    noise(0.03, { vol: 0.05, cutoff: 1200 });
+    noise(0.08, { vol: 0.06, cutoff: 500 });
   },
 };

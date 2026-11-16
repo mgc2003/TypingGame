@@ -43,7 +43,7 @@ export class EndingScene {
     const total = NPCS.length + 1;
     const spacing = 96;
     const x0 = W / 2 - ((total - 1) * spacing) / 2 - 24;
-    const sprites = [['fox', 'down0'], ...NPCS.map((n) => [n.sprite, 'idle'])];
+    const sprites = [['owl', 'down' + (Math.floor(this.t / 10) % 2)], ...NPCS.map((n) => [n.sprite, 'idle'])];
     sprites.forEach(([s, f], i) => {
       const bob = Math.round(Math.sin(this.t / 15 + i) * 3);
       drawSprite(ctx, s, f, x0 + i * spacing, 40 + bob, 3);

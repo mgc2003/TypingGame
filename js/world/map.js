@@ -112,7 +112,7 @@ export function tileFor(grid, x, y, flags) {
 
 /** Flavour text for interactable tiles (signs, gate, bridge, door). Keyed by "x,y" or tile char. */
 export const TILE_TEXT = {
-  '8,6': ['(POST OFFICE. Letters in, letters out. Please wipe your paws.)'],
+  '8,6': ['(POST OFFICE. Letters in, letters out. Please wipe your talons.)'],
   '15,6': ['(EAST ROAD. Pond, river, and the Sage\'s grove beyond.)', '(Someone has scribbled underneath: "Mind the log fence.")'],
   D: ['(The post office door is shut tight. A note says: CLOSED FOR STORM CLEANUP.)'],
   G: ['(A heavy log fence blocks the east road. A tag on it reads: PROPERTY OF THE POSTMASTER.)'],

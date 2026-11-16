@@ -74,8 +74,9 @@ export class TitleScene {
     drawText(ctx, 'LOST LETTERS', W / 2, 70, { scale: 6, color: C.white, align: 'center', shadow: C.shadow });
     drawText(ctx, 'a little typing adventure', W / 2, 130, { scale: 2, color: C.gray, align: 'center' });
 
-    const bob = Math.floor(this.t / 20) % 2;
-    drawSprite(ctx, 'fox', bob ? 'down1' : 'down2', W / 2 - 32, 170, 4);
+    const wing = Math.floor(this.t / 12) % 2;
+    const hover = Math.round(Math.sin(this.t / 15) * 4);
+    drawSprite(ctx, 'owl', 'down' + wing, W / 2 - 32, 166 + hover, 4);
 
     this.menu.render(ctx, W / 2 - 80, 260, { gap: 34 });
 

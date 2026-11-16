@@ -2,13 +2,13 @@
 
 A small retro pixel typing adventure. Its look is inspired by classic indie RPGs: black dialogue boxes, a pixel font, and text that types itself out with little blips. All of the art, characters, writing and sounds are original.
 
-Last night's storm scrambled the whole village's mail. You play a fox courier, newly hired by the grumpy mailbox Postmaster. To win each villager's trust, you **retype their ruined letters** fast and accurately enough to meet their goal. Each new friend opens the road onward, until you reach the Turtle Sage and the last lost letter.
+Last night's storm scrambled the whole village's mail. You play a little owl courier, newly hired by the grumpy mailbox Postmaster. To win each villager's trust, you **retype their ruined letters** fast and accurately enough to meet their goal. Each new friend opens the road onward, until you reach the Turtle Sage and the last lost letter.
 
 ## How to play
 
 | Where | Keys |
 | --- | --- |
-| Walking | Arrow keys **or** WASD |
+| Flying | Arrow keys **or** WASD |
 | Talk / confirm | Z, E or Enter |
 | Back / skip text | X, Shift or Esc |
 | Menu (in the village) | Esc |

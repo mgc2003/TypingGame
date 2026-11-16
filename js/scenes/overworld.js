@@ -32,7 +32,6 @@ export class OverworldScene {
       y: SPAWN.ty * TILE - 4,
       dir: 'down',
       moving: false,
-      anim: 0,
     };
     this.camX = 0;
     this.t = 0;
@@ -228,10 +227,7 @@ export class OverworldScene {
       if (!this.boxBlocked(nx, p.y)) p.x = nx;
       const ny = p.y + dy * SPEED;
       if (!this.boxBlocked(p.x, ny)) p.y = ny;
-      p.anim++;
-      if (++this.stepTimer % 18 === 0) sfx.step();
-    } else {
-      p.anim = 0;
+      if (++this.stepTimer % 20 === 0) sfx.step();
     }
 
     const target = p.x + 8 - VIEW_W / 2;
@@ -292,11 +288,19 @@ export class OverworldScene {
     ctx.fillRect(0, 0, W, H);
   }
 
+  /** The owl courier hovers above its shadow, flapping faster while it flies somewhere. */
   drawPlayer(ctx) {
     const p = this.player;
-    const step = p.moving ? [0, 1, 0, 2][Math.floor(p.anim / 8) % 4] : 0;
+    const wing = Math.floor(this.t / (p.moving ? 5 : 11)) % 2;
+    const hover = Math.round(Math.sin(this.t / 12) * 1.5);
+    const lift = 6 + hover;
     const base = p.dir === 'left' || p.dir === 'right' ? 'side' : p.dir;
-    drawSprite(ctx, 'fox', base + step, p.x, p.y, 1, p.dir === 'left');
+    // shadow on the ground marks where the owl "is" for walls and talking
+    ctx.fillStyle = 'rgba(0,0,0,0.38)';
+    ctx.beginPath();
+    ctx.ellipse(p.x + 8, p.y + 14, 5 - hover * 0.4, 2, 0, 0, Math.PI * 2);
+    ctx.fill();
+    drawSprite(ctx, 'owl', base + wing, p.x, p.y - lift, 1, p.dir === 'left');
   }
 
   drawNpc(ctx, npc, marked) {

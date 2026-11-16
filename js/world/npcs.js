@@ -26,11 +26,11 @@ export const NPCS = [
       ],
       befriend: [
         'You did it! My letters look brand new!',
-        'I... I think we\'re friends now. I\'ve never had a friend with ears before.',
+        'I... I think we\'re friends now. I\'ve never had a friend with feathers before.',
         'The Postmaster is waiting for you. Grumpy, but nice inside. Like a walnut.',
       ],
       after: ['Hi again, {name}! Want to practice with my letters some more?'],
-      practiced: ['Wow, you\'re getting so fast! I can barely see your paws move.'],
+      practiced: ['Wow, you\'re getting so fast! I can barely see your wings move.'],
     },
   },
   {
@@ -51,7 +51,7 @@ export const NPCS = [
         '{wpm} words a minute. {acc}% accuracy. Don\'t smudge anything.',
       ],
       prompt: 'Retype the Postmaster\'s letters?',
-      fail: ['Hmph. Smudges everywhere. Try again when your paws are steadier.'],
+      fail: ['Hmph. Smudges everywhere. Try again when your talons are steadier.'],
       befriend: [
         '...Well. I\'ll be stamped. That was proper courier work.',
         'I\'ve lifted the log fence on the east road. The ghost by the pond has a stack of letters too.',
@@ -61,12 +61,12 @@ export const NPCS = [
       practiced: ['Acceptable. More than acceptable, actually. Don\'t let it go to your head.'],
     },
     intro: [
-      'Hmph. So YOU\'RE the new courier? {name}, is it?',
+      'Hmph. So YOU\'RE the new courier? An owl, of all things. {name}, is it?',
       'Last night\'s storm tore through the post office. Every letter in the village got soaked, scrambled and blown about.',
       'Your job is simple. Read each villager\'s ruined letters and type them out fresh. Quickly. Neatly.',
       'Folks here won\'t trust a sloppy courier. Hit their mark for speed and accuracy, and they\'ll warm up to you.',
       'Start with the Mushroom in the grove just east of here. It\'s too shy to come and ask for its own mail.',
-      'Walk with the arrow keys or WASD. Talk with Z, E or Enter. Esc opens the menu. Now get moving!',
+      'Fly with the arrow keys or WASD. Talk with Z, E or Enter. Esc opens the menu. Now get moving!',
     ],
   },
   {
@@ -120,7 +120,7 @@ export const NPCS = [
         'Wonderful. Every word is in its place.',
         'You have delivered the last of the lost letters, {name}. The village is whole again.',
       ],
-      after: ['Welcome back, {name}. A courier\'s paws stay sharp with practice. Shall we?'],
+      after: ['Welcome back, {name}. A courier\'s talons stay sharp with practice. Shall we?'],
       practiced: ['Steady and swift. The river would be proud.'],
     },
   },
